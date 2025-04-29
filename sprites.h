@@ -74,8 +74,11 @@ typedef struct {
   int timeUntilNextFrame;
   int direction;
   int isAnimating;
+  int isAttacking;
   int currentFrame;
   int numFrames;
+  int health; //start with 20 hp
+  int damageTimer;
   u8 oamIndex; 
 } SPRITE;
 
