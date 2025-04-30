@@ -934,38 +934,80 @@ extern const unsigned short decor_8x8Pal[256];
 
 extern const unsigned short town1fakeMap[1024];
 # 11 "main.c" 2
+# 1 "tilesetsample.h" 1
+# 21 "tilesetsample.h"
+extern const unsigned short tilesetsampleTiles[32768];
 
 
-# 1 "spritesheetm3.h" 1
-# 21 "spritesheetm3.h"
-extern const unsigned short spritesheetm3Tiles[16384];
+extern const unsigned short tilesetsamplePal[256];
+# 12 "main.c" 2
+# 1 "tilemapsample.h" 1
 
 
-extern const unsigned short spritesheetm3Pal[256];
+
+
+
+
+
+extern const unsigned short tilemapsampleMap[1024];
+# 13 "main.c" 2
+# 1 "512.h" 1
+# 21 "512.h"
+extern const unsigned short _12Tiles[131072];
+
+
+extern const unsigned short _12Pal[256];
 # 14 "main.c" 2
+# 1 "512map.h" 1
 
 
-# 1 "pause.h" 1
-# 21 "pause.h"
-extern const unsigned short pauseBitmap[19200];
 
 
-extern const unsigned short pausePal[256];
-# 17 "main.c" 2
+
+
+
+extern const unsigned short _512Map[4096];
+# 15 "main.c" 2
+
+
+# 1 "sprite.h" 1
+# 21 "sprite.h"
+extern const unsigned short spriteTiles[40000];
+
+
+extern const unsigned short spritePal[256];
+# 18 "main.c" 2
+# 1 "myspritesheet.h" 1
+# 21 "myspritesheet.h"
+extern const unsigned short myspritesheetTiles[16384];
+
+
+extern const unsigned short myspritesheetPal[256];
+# 19 "main.c" 2
+
+
+
+# 1 "paused.h" 1
+# 21 "paused.h"
+extern const unsigned short pausedBitmap[19200];
+
+
+extern const unsigned short pausedPal[256];
+# 23 "main.c" 2
 # 1 "win.h" 1
 # 21 "win.h"
 extern const unsigned short winBitmap[19200];
 
 
 extern const unsigned short winPal[256];
-# 18 "main.c" 2
+# 24 "main.c" 2
 # 1 "lose.h" 1
 # 21 "lose.h"
 extern const unsigned short loseBitmap[19200];
 
 
 extern const unsigned short losePal[256];
-# 19 "main.c" 2
+# 25 "main.c" 2
 
 
 # 1 "bossroom1.h" 1
@@ -977,9 +1019,9 @@ extern const unsigned short losePal[256];
 
 
 extern const unsigned short bossroom1Map[1024];
-# 22 "main.c" 2
+# 28 "main.c" 2
 # 1 "bossmovement.h" 1
-# 28 "bossmovement.h"
+# 27 "bossmovement.h"
 extern SPRITE player;
 
 
@@ -1014,7 +1056,7 @@ void drawBoss(BOSS* boss, OBJ_ATTR* shadowOAM, int index, int hOff, int vOff);
 
 
 int checkBossCollision(BOSS* boss, SPRITE* player);
-# 23 "main.c" 2
+# 29 "main.c" 2
 
 
 # 1 "MAP1col.h" 1
@@ -1023,14 +1065,14 @@ extern const unsigned short MAP1colBitmap[16384];
 
 
 extern const unsigned short MAP1colPal[256];
-# 26 "main.c" 2
+# 32 "main.c" 2
 # 1 "map2col.h" 1
 # 21 "map2col.h"
 extern const unsigned short map2colBitmap[32768];
 
 
 extern const unsigned short map2colPal[256];
-# 27 "main.c" 2
+# 33 "main.c" 2
 
 
 # 1 "instructions.h" 1
@@ -1039,72 +1081,30 @@ extern const unsigned short instructionsBitmap[19200];
 
 
 extern const unsigned short instructionsPal[256];
-# 30 "main.c" 2
-
-
-
-# 1 "1bubble.h" 1
-# 21 "1bubble.h"
-extern const unsigned short _bubbleTiles[40960];
-
-
-extern const unsigned short _bubblePal[256];
-# 34 "main.c" 2
-# 1 "2cloud.h" 1
-# 21 "2cloud.h"
-extern const unsigned short _cloudTiles[40960];
-
-
-extern const unsigned short _cloudPal[256];
-# 35 "main.c" 2
-# 1 "3back.h" 1
-# 21 "3back.h"
-extern const unsigned short _backTiles[40960];
-
-
-extern const unsigned short _backPal[256];
 # 36 "main.c" 2
 
-# 1 "background.h" 1
 
 
+# 1 "parallaxtileset.h" 1
+# 21 "parallaxtileset.h"
+extern const unsigned short parallaxtilesetTiles[22528];
 
 
-
-
-
-extern const unsigned short backgroundMap[2048];
-# 38 "main.c" 2
-# 1 "cloudforeground.h" 1
-
-
-
-
-
-
-
-extern const unsigned short cloudforegroundMap[2048];
-# 39 "main.c" 2
-# 1 "starforeground.h" 1
-
-
-
-
-
-
-
-extern const unsigned short starforegroundMap[2048];
+extern const unsigned short parallaxtilesetPal[256];
 # 40 "main.c" 2
 
 
-# 1 "gardenTiles.h" 1
-# 21 "gardenTiles.h"
-extern const unsigned short gardenTilesTiles[256];
+# 1 "parallaxbg.h" 1
 
 
-extern const unsigned short gardenTilesPal[256];
+
+
+
+
+
+extern const unsigned short parallaxbgMap[1024];
 # 43 "main.c" 2
-# 1 "myGarden.h" 1
+# 1 "parallaxclouds.h" 1
 
 
 
@@ -1112,18 +1112,8 @@ extern const unsigned short gardenTilesPal[256];
 
 
 
-extern const unsigned short myGardenMap[1024];
+extern const unsigned short parallaxcloudsMap[1024];
 # 44 "main.c" 2
-# 1 "myClouds.h" 1
-
-
-
-
-
-
-
-extern const unsigned short myCloudsMap[1024];
-# 45 "main.c" 2
 
 
 # 1 "digitalSound.h" 1
@@ -1149,7 +1139,7 @@ typedef struct{
 
 SOUND soundA;
 SOUND soundB;
-# 48 "main.c" 2
+# 47 "main.c" 2
 # 1 "play.h" 1
 
 
@@ -1183,14 +1173,14 @@ extern int currentSong;
 
 extern int minute;
 extern int second;
-# 49 "main.c" 2
+# 48 "main.c" 2
 # 1 "surge.h" 1
 
 
 extern const unsigned int surge_sampleRate;
 extern const unsigned int surge_length;
 extern const signed char surge_data[];
-# 50 "main.c" 2
+# 49 "main.c" 2
 # 1 "analogSound.h" 1
 # 257 "analogSound.h"
 enum note {
@@ -1281,7 +1271,7 @@ void playDrumSound(unsigned char r, unsigned char s, unsigned char b, unsigned c
 void playNoteWithDuration(NoteWithDuration *n, unsigned char duty);
 void playChannel1(unsigned short note, unsigned char length, unsigned char sweepShift, unsigned char sweepTime, unsigned char sweepDir, unsigned char envStepTime, unsigned char envDir, unsigned char duty);
 void playAnalogSound(unsigned short sound);
-# 51 "main.c" 2
+# 50 "main.c" 2
 
 void playPauseSound() {
     playAnalogSound(7);
@@ -1340,6 +1330,9 @@ typedef enum {DOWN, UP, LEFT, RIGHT} DIRECTION;
 int muShengUnlocked = 0;
 int currentCharacter = 0;
 
+int animationCounter = 0;
+int animationSpeed = 10;
+
 
 unsigned short buttons;
 unsigned short oldButtons;
@@ -1350,7 +1343,7 @@ int vOff;
 
 
 int prevState;
-# 130 "main.c"
+# 132 "main.c"
 int main() {
     initSound();
     initialize();
@@ -1403,41 +1396,40 @@ void initialize() {
 
 }
 
+
 void goToStart() {
 
     hideSprites();
-
-    (*(volatile unsigned short *)0x4000000) = ((0) & 7) | (1 << (8 + (0 % 4)));
 
 
 
     (*(volatile unsigned short *)0x4000000) = ((0) & 7) | (1 << (8 + (0 % 4))) | (1 << (8 + (1 % 4))) | (1 << 12);
 
 
-
-    (*(volatile unsigned short*) 0x4000008) = ((0) << 2) | ((8) << 8) | 1;
-
-
-
-    DMANow(3, gardenTilesPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, gardenTilesTiles, &((CB*) 0x6000000)[0], 512 / 2);
-    DMANow(3, myGardenMap, &((SB*) 0x6000000)[8], (2048) / 2);
+    (*(volatile unsigned short*) 0x4000008) = ((0) << 2) | ((8) << 8) | (0 << 14) | (1 << 7) | 2;
+    (*(volatile unsigned short*) 0x400000A) = ((0) << 2) | ((16) << 8) | (0 << 14) | (1 << 7)| 0;
 
 
 
-    (*(volatile unsigned short*) 0x400000A) = ((10) << 8) | ((0) << 2) | 0;
+    DMANow(3, parallaxtilesetPal, ((unsigned short *)0x5000000), 256);
+    DMANow(3, parallaxtilesetTiles, &((CB*) 0x6000000)[0], 45056 / 2);
+    DMANow(3, parallaxtilesetTiles, &((CB*) 0x6000000)[0], 45056 / 2);
+
+    DMANow(3, parallaxbgMap, &((SB*) 0x6000000)[8], (2048) / 2);
 
 
-    DMANow(3, myCloudsMap, &((SB*) 0x6000000)[10], (2048) / 2);
-# 236 "main.c"
-    DMANow(3, spritesheetm3Tiles, &((CB*) 0x6000000)[4], 32768/2);
-    DMANow(3, spritesheetm3Pal, ((u16 *)0x5000200), 256);
 
-    startsprite.width = 16;
-    startsprite.height = 40;
-    startsprite.x = 40;
-    startsprite.y = 64;
+    DMANow(3, parallaxcloudsMap, &((SB*) 0x6000000)[16], (2048) / 2);
 
+
+
+     DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
+     DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
+
+     startsprite.width = 16;
+     startsprite.height = 40;
+     startsprite.x = 40;
+     startsprite.y = 64;
 
     playSoundA(surge_data, surge_length, 1);
     state = START;
@@ -1447,15 +1439,16 @@ void goToStart() {
 
 void updatestart() {
 
-    if ((~(buttons) & ((1<<2)))) {
-        ((SB*) 0x6000000)[8].tilemap[((15) * (32) + (15))] = (FLOWERID & 1023);
-    }
+
+
+
+
 
 
     hScroll++;
 
     (*(volatile unsigned short*) 0x04000014) = hScroll;
-    (*(volatile unsigned short*) 0x04000010) = hScroll / 2;
+    (*(volatile unsigned short*) 0x04000010) = hScroll/2;
 
 }
 
@@ -1474,6 +1467,7 @@ void start() {
     }
 
 }
+
     void goToInstructions() {
         (*(volatile unsigned short *)0x4000000) = ((4) & 7) | (1 << (8 + (2 % 4)));
 
@@ -1506,9 +1500,9 @@ void start() {
 
 
 
-        DMANow(3, pausePal, ((unsigned short *)0x5000000), 256);
+        DMANow(3, pausedPal, ((unsigned short *)0x5000000), 256);
 
-        drawFullscreenImage4(pauseBitmap);
+        drawFullscreenImage4(pausedBitmap);
 
         hideSprites();
         DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 128 * 4);
@@ -1521,6 +1515,8 @@ void start() {
         }
         state = PAUSE;
     }
+
+
 
     void pause() {
     waitForVBlank();
@@ -1613,14 +1609,13 @@ void goToGame1() {
         (*(volatile unsigned short*) 0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 7) | (0 << 14);
 
 
-        DMANow(3, decor_8x8Tiles, &((CB*) 0x6000000)[0], 1024/2);
-        DMANow(3, town1fakeMap, &((SB*) 0x6000000)[28], (2048)/2);
-        DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
+        DMANow(3, tilesetsampleTiles, &((CB*) 0x6000000)[0], 65536/2);
+        DMANow(3, tilemapsampleMap, &((SB*) 0x6000000)[28], (2048)/2);
+        DMANow(3, tilesetsamplePal, ((unsigned short *)0x5000000), 256);
 
 
-        DMANow(3, spritesheetm3Tiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, spritesheetm3Pal, ((u16 *)0x5000200), 256);
-
+        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
+        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
         state = GAME1;
         return;
     }
@@ -1633,13 +1628,13 @@ void goToGame1() {
 
 
 
-    DMANow(3, decor_8x8Tiles, &((CB*) 0x6000000)[0], 1024/2);
-    DMANow(3, town1fakeMap, &((SB*) 0x6000000)[28], (2048)/2);
-    DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
+    DMANow(3, tilesetsampleTiles, &((CB*) 0x6000000)[0], 65536/2);
+    DMANow(3, tilemapsampleMap, &((SB*) 0x6000000)[28], (2048)/2);
+    DMANow(3, tilesetsamplePal, ((unsigned short *)0x5000000), 256);
 
 
-    DMANow(3, spritesheetm3Tiles, &((CB*) 0x6000000)[4], 32768/2);
-    DMANow(3, spritesheetm3Pal, ((u16 *)0x5000200), 256);
+    DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
+    DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
 
 
     hideSprites();
@@ -1651,8 +1646,8 @@ void goToGame1() {
 
     player.width = 16;
     player.height = 40;
-    player.x = 40;
-    player.y = 64;
+    player.x = 30;
+    player.y = 14;
     player.numFrames = 3;
     player.direction = DOWN;
     player.timeUntilNextFrame = 10;
@@ -1661,6 +1656,7 @@ void goToGame1() {
     player.currentFrame = 0;
     player.isAnimating = 0;
     player.health = 20;
+
 
 
     bossEntrance.width = 16;
@@ -1673,6 +1669,7 @@ void goToGame1() {
 
     state = GAME1;
 }
+
 
 void game1() {
 
@@ -1721,10 +1718,8 @@ void goToBoss1() {
         DMANow(3, bossroom1Map, &((SB*) 0x6000000)[28], (2048)/2);
         DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
 
-
-        DMANow(3, spritesheetm3Tiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, spritesheetm3Pal, ((u16 *)0x5000200), 256);
-
+        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
+        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
         state = BOSS1;
         return;
     }
@@ -1740,10 +1735,8 @@ void goToBoss1() {
         DMANow(3, decor_8x8Tiles, &((CB*) 0x6000000)[0], 1024/2);
         DMANow(3, bossroom1Map, &((SB*) 0x6000000)[28], (2048)/2);
         DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
-
-
-        DMANow(3, spritesheetm3Tiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, spritesheetm3Pal, ((u16 *)0x5000200), 256);
+        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
+        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
 
 
     hideSprites();
@@ -1753,8 +1746,7 @@ void goToBoss1() {
     vOff = 0;
 
 
-    player.width = 16;
-    player.height = 40;
+
     player.x = 100;
     player.y = 100;
     player.numFrames = 3;
@@ -1769,6 +1761,8 @@ void goToBoss1() {
 
     state = BOSS1;
 }
+
+
 
 void boss() {
     updatePlayer();
@@ -1878,6 +1872,7 @@ void boss() {
     }
 
 
+
     if (player.isAttacking) {
         if (--player.timeUntilNextFrame <= 0) {
             player.timeUntilNextFrame = 5;
@@ -1887,70 +1882,99 @@ void boss() {
                 player.isAttacking = 0;
             }
         }
+
     }
-# 717 "main.c"
-        hOff = player.x - (240 - player.width) /2;
-        vOff = player.y - (160 - player.height) /2;
 
-        if (player.x < 0) {
-            player.x = 0;
-        }
-        if (player.y < 0) {
-            player.y = 0;
-        }
-        if(player.x + player.width > 256) {
-            player.x = 256 - player.width;
-        }
-        if(player.y + player.height > 256) {
-            player.y = 256 - player.height;
-        }
 
-        if (hOff < 0) {
-            hOff = 0;
-        }
-        if (vOff < 0) {
-            vOff = 0;
-        }
 
-        if (hOff > 256 - 240){
-            hOff = 256 - 240;
-        }
-        if (vOff > 256 - 160){
-            vOff = 256 - 160;
-        }
+
+
+    if (player.x < 0) player.x = 0;
+    if (player.y < 0) player.y = 0;
+    if (player.x + player.width > 256) player.x = 256 - player.width;
+    if (player.y + player.height > 256) player.y = 256 - player.height;
+
+
+    hOff = player.x - (240 - player.width) / 2;
+    vOff = player.y - (160 - player.height) / 2;
+
+
+    if (hOff < 0) hOff = 0;
+    if (vOff < 0) vOff = 0;
+    if (hOff > 256 - 240) hOff = 256 - 240;
+    if (vOff > 256 - 160) vOff = 256 - 160;
     }
+
+
+
+
+
+
     void drawPlayer() {
 
-        shadowOAM[0].attr0 = ((player.y) & 0xFF) | (0<<13) | (2<<14);
-        shadowOAM[0].attr1 = ((player.x) & 0x1FF) | (2<<14);
+        shadowOAM[0].attr0 = ((player.y - vOff) & 0xFF) | (0<<13) | (2<<14);
+        shadowOAM[0].attr1 = ((player.x - hOff) & 0x1FF) | (2<<14);
+
+
 
         (*(volatile unsigned short*) 0x04000010) = hOff;
         (*(volatile unsigned short*) 0x04000012) = vOff;
 
         int baseTileIndex = 0;
+        int row = 0;
+
+
+        animationCounter++;
+        if (animationCounter >= animationSpeed) {
+            animationCounter = 0;
+            player.currentFrame = (player.currentFrame + 1) % 7;
+        }
 
         if (player.isAttacking) {
 
             if (currentCharacter == 1) {
-                shadowOAM[0].attr2 = ((((5) * (32) + (3))) & 0x3FF) | (((3) & 0xF) <<12);
+                shadowOAM[0].attr2 = ((((16) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
             } else {
                 shadowOAM[0].attr2 = ((((1) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
             }
         } else {
 
             if (currentCharacter == 1) {
-                shadowOAM[0].attr2 = ((((4) * (32) + (0))) & 0x3FF) | (((3) & 0xF) <<12);
+                shadowOAM[0].attr2 = ((((16) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
             } else {
-                shadowOAM[0].attr2 = ((((0) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
+
+
+            if (player.direction == DOWN) {
+                row = 0;
+
+
+            } else if (player.direction == UP) {
+                row = 1;
+            } else if (player.direction == LEFT) {
+                row = 2;
+            } else if (player.direction == RIGHT) {
+                row = 3;
+            }
+
+
+            row += (currentCharacter * 4);
+
+
+
+            int column = player.currentFrame % 7;
+
+            shadowOAM[0].attr2 = ((((row * 4) * (32) + (column * 2))) & 0x3FF) | (((0) & 0xF) <<12);
             }
         }
 
     }
+
+
     void drawBossEntrance(){
         int screenX = bossEntrance.x - hOff;
         int screenY = bossEntrance.y - vOff;
 
-         shadowOAM[1].attr0 = ((screenY) & 0xFF) | (0<<13) | (2<<14);
+         shadowOAM[1].attr0 = ((screenY) & 0xFF) | (1<<13) | (2<<14);
          shadowOAM[1].attr1 = ((screenX) & 0x1FF) | (2<<14);
          shadowOAM[1].attr2 = ((((17) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
     }
@@ -1958,7 +1982,7 @@ void boss() {
     void drawstartsprite(){
         shadowOAM[5].attr0 = ((startsprite.y) & 0xFF) | (0<<13) | (0<<14);
         shadowOAM[5].attr1 = ((startsprite.x) & 0x1FF) | (3<<14);
-        shadowOAM[5].attr2 = ((((1) * (32) + (10))) & 0x3FF) | (((2) & 0xF) <<12);
+        shadowOAM[5].attr2 = ((((90) * (32) + (0))) & 0x3FF) | (((1) & 0xF) <<12) | (((1) & 3) << 10);
 
     }
 
@@ -1968,7 +1992,7 @@ void boss() {
 
         shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
         shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (3<<14);
-        shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((1) & 0xF) <<12);
+        shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
 
 
 
@@ -1976,20 +2000,20 @@ void boss() {
         if (waterBoss.currentFrame == 0) {
             shadowOAM[3].attr0 = (2<<8);
 
-            shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((1) & 0xF) <<12);
+            shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
         } else if (waterBoss.currentFrame == 1) {
 
             shadowOAM[3].attr0 = (2<<8);
-            shadowOAM[2].attr2 = ((((17) * (32) + (9))) & 0x3FF) | (((1) & 0xF) <<12);
+            shadowOAM[2].attr2 = ((((17) * (32) + (9))) & 0x3FF) | (((0) & 0xF) <<12);
         } else if (waterBoss.currentFrame == 2) {
 
             shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
             shadowOAM[2].attr1 = ((screenX-64) & 0x1FF) | (3<<14);
-            shadowOAM[2].attr2 = ((((17) * (32) + (15))) & 0x3FF) | (((1) & 0xF) <<12);
+            shadowOAM[2].attr2 = ((((17) * (32) + (15))) & 0x3FF) | (((0) & 0xF) <<12);
 
             shadowOAM[3].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
             shadowOAM[3].attr1 = ((screenX) & 0x1FF) | (3<<14);
-            shadowOAM[3].attr2 = ((((17) * (32) + (23))) & 0x3FF) | (((1) & 0xF) <<12);
+            shadowOAM[3].attr2 = ((((17) * (32) + (23))) & 0x3FF) | (((0) & 0xF) <<12);
         }
 
 
@@ -2023,6 +2047,7 @@ void boss() {
         *(unsigned short*)0x4000208 = 1;
 
     }
+
 
     void interruptHandler() {
         *(unsigned short*)0x4000208 = 0;

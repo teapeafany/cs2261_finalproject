@@ -912,13 +912,6 @@ void mgba_printf(const char* string, ...);
 void mgba_break(void);
 void mgba_close(void);
 # 9 "bossmovement.h" 2
-# 1 "pause.h" 1
-# 21 "pause.h"
-extern const unsigned short pauseBitmap[19200];
-
-
-extern const unsigned short pausePal[256];
-# 10 "bossmovement.h" 2
 # 1 "bossroom1.h" 1
 
 
@@ -928,8 +921,8 @@ extern const unsigned short pausePal[256];
 
 
 extern const unsigned short bossroom1Map[1024];
-# 11 "bossmovement.h" 2
-# 28 "bossmovement.h"
+# 10 "bossmovement.h" 2
+# 27 "bossmovement.h"
 extern SPRITE player;
 
 

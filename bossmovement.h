@@ -6,7 +6,6 @@
 #include "mode0.h"
 #include "sprites.h"
 #include "print.h"
-#include "pause.h"
 #include "bossroom1.h"
 
 // Boss behavior states
