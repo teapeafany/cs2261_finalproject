@@ -8,13 +8,13 @@
 //	+ 1024 tiles not compressed
 //	Total size: 512 + 32768 = 33280
 //
-//	Time-stamp: 2025-04-30, 13:42:13
+//	Time-stamp: 2025-04-30, 07:51:47
 //	Exported by Cearn's GBA Image Transmogrifier, v0.8.3
 //	( http://www.coranac.com/projects/#grit )
 //
 //======================================================================
 
-#ifndef GRIT_MYSPRITESHEET_H
+//#ifndef GRIT_MYSPRITESHEET_H
 #define GRIT_MYSPRITESHEET_H
 
 #define myspritesheetTilesLen 32768

@@ -972,7 +972,7 @@ void initBoss(BOSS* boss, int x, int y, int width, int height) {
     boss->isInvulnerable = 0;
     boss->invulnerableTimer = 0;
     boss->currentFrame = 0;
-    boss->timeUntilNextFrame = 50;
+    boss->timeUntilNextFrame = 20;
     boss-> lives = 20;
 }
 
@@ -1073,16 +1073,14 @@ void updateBoss(BOSS* boss, SPRITE* player) {
 
 int checkBossCollision(BOSS* boss, SPRITE* player) {
 
-     if (boss->currentFrame == 2) {
+     if (boss->currentFrame == 1 || boss->currentFrame == 2) {
 
-        int secondHalfX = boss->x;
-        int secondHalfY = boss->y;
+            if (collision(
+                player->x, player->y, player->width, player->height,
+                boss->x, boss->y, boss->width, boss->height)) {
 
-
-        return (player->x < secondHalfX + boss->width &&
-                player->x + player->width > secondHalfX &&
-                player->y < secondHalfY + boss->height &&
-                player->y + player->height > secondHalfY);
-    }
+                return 1;
+            }
+        }
     return 0;
 }

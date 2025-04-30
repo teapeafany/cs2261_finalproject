@@ -917,30 +917,14 @@ extern const unsigned short introPal[256];
 # 7 "main.c" 2
 
 
-# 1 "tilesetfaketown.h" 1
-# 21 "tilesetfaketown.h"
-extern const unsigned short decor_8x8Tiles[512];
 
-
-extern const unsigned short decor_8x8Pal[256];
-# 10 "main.c" 2
-# 1 "town1fake.h" 1
-
-
-
-
-
-
-
-extern const unsigned short town1fakeMap[1024];
-# 11 "main.c" 2
 # 1 "tilesetsample.h" 1
 # 21 "tilesetsample.h"
 extern const unsigned short tilesetsampleTiles[32768];
 
 
 extern const unsigned short tilesetsamplePal[256];
-# 12 "main.c" 2
+# 11 "main.c" 2
 # 1 "tilemapsample.h" 1
 
 
@@ -950,14 +934,14 @@ extern const unsigned short tilesetsamplePal[256];
 
 
 extern const unsigned short tilemapsampleMap[1024];
-# 13 "main.c" 2
+# 12 "main.c" 2
 # 1 "512.h" 1
 # 21 "512.h"
 extern const unsigned short _12Tiles[131072];
 
 
 extern const unsigned short _12Pal[256];
-# 14 "main.c" 2
+# 13 "main.c" 2
 # 1 "512map.h" 1
 
 
@@ -967,23 +951,16 @@ extern const unsigned short _12Pal[256];
 
 
 extern const unsigned short _512Map[4096];
-# 15 "main.c" 2
+# 14 "main.c" 2
 
 
-# 1 "sprite.h" 1
-# 21 "sprite.h"
-extern const unsigned short spriteTiles[40000];
-
-
-extern const unsigned short spritePal[256];
-# 18 "main.c" 2
 # 1 "myspritesheet.h" 1
 # 21 "myspritesheet.h"
 extern const unsigned short myspritesheetTiles[16384];
 
 
 extern const unsigned short myspritesheetPal[256];
-# 19 "main.c" 2
+# 17 "main.c" 2
 
 
 
@@ -993,86 +970,41 @@ extern const unsigned short pausedBitmap[19200];
 
 
 extern const unsigned short pausedPal[256];
-# 23 "main.c" 2
+# 21 "main.c" 2
 # 1 "win.h" 1
 # 21 "win.h"
 extern const unsigned short winBitmap[19200];
 
 
 extern const unsigned short winPal[256];
-# 24 "main.c" 2
+# 22 "main.c" 2
 # 1 "lose.h" 1
 # 21 "lose.h"
 extern const unsigned short loseBitmap[19200];
 
 
 extern const unsigned short losePal[256];
-# 25 "main.c" 2
+# 23 "main.c" 2
 
 
-# 1 "bossroom1.h" 1
-
-
-
+# 1 "bossmazemap.h" 1
 
 
 
 
-extern const unsigned short bossroom1Map[1024];
-# 28 "main.c" 2
-# 1 "bossmovement.h" 1
-# 27 "bossmovement.h"
-extern SPRITE player;
 
 
 
-
-typedef struct {
-    int x, y;
-    int width, height;
-    int lives;
-    int behaviorState;
-    int behaviorTimer;
-    int attackCooldown;
-    int damageDelay;
-    int isInvulnerable;
-    int invulnerableTimer;
-    int timeUntilNextFrame;
-    int direction;
-    int isAnimating;
-    int currentFrame;
-    int numFrames;
-    u8 oamIndex;
-
-} BOSS;
-
-void initBoss(BOSS* boss, int x, int y, int width, int height);
+extern const unsigned short bossmazemapMap[1024];
+# 26 "main.c" 2
+# 1 "bossmazetiles.h" 1
+# 21 "bossmazetiles.h"
+extern const unsigned short bossmazetilesTiles[32768];
 
 
-void updateBoss(BOSS* boss, SPRITE* player);
+extern const unsigned short bossmazetilesPal[256];
+# 27 "main.c" 2
 
-
-void drawBoss(BOSS* boss, OBJ_ATTR* shadowOAM, int index, int hOff, int vOff);
-
-
-int checkBossCollision(BOSS* boss, SPRITE* player);
-# 29 "main.c" 2
-
-
-# 1 "MAP1col.h" 1
-# 21 "MAP1col.h"
-extern const unsigned short MAP1colBitmap[16384];
-
-
-extern const unsigned short MAP1colPal[256];
-# 32 "main.c" 2
-# 1 "map2col.h" 1
-# 21 "map2col.h"
-extern const unsigned short map2colBitmap[32768];
-
-
-extern const unsigned short map2colPal[256];
-# 33 "main.c" 2
 
 
 # 1 "instructions.h" 1
@@ -1081,7 +1013,7 @@ extern const unsigned short instructionsBitmap[19200];
 
 
 extern const unsigned short instructionsPal[256];
-# 36 "main.c" 2
+# 31 "main.c" 2
 
 
 
@@ -1091,7 +1023,7 @@ extern const unsigned short parallaxtilesetTiles[22528];
 
 
 extern const unsigned short parallaxtilesetPal[256];
-# 40 "main.c" 2
+# 35 "main.c" 2
 
 
 # 1 "parallaxbg.h" 1
@@ -1103,7 +1035,7 @@ extern const unsigned short parallaxtilesetPal[256];
 
 
 extern const unsigned short parallaxbgMap[1024];
-# 43 "main.c" 2
+# 38 "main.c" 2
 # 1 "parallaxclouds.h" 1
 
 
@@ -1113,7 +1045,27 @@ extern const unsigned short parallaxbgMap[1024];
 
 
 extern const unsigned short parallaxcloudsMap[1024];
-# 44 "main.c" 2
+# 39 "main.c" 2
+# 1 "clouds.h" 1
+
+
+
+
+
+
+
+extern const unsigned short cloudsMap[1024];
+# 40 "main.c" 2
+# 1 "bubble.h" 1
+
+
+
+
+
+
+
+extern const unsigned short bubbleMap[1024];
+# 41 "main.c" 2
 
 
 # 1 "digitalSound.h" 1
@@ -1139,7 +1091,7 @@ typedef struct{
 
 SOUND soundA;
 SOUND soundB;
-# 47 "main.c" 2
+# 44 "main.c" 2
 # 1 "play.h" 1
 
 
@@ -1173,14 +1125,14 @@ extern int currentSong;
 
 extern int minute;
 extern int second;
-# 48 "main.c" 2
+# 45 "main.c" 2
 # 1 "surge.h" 1
 
 
 extern const unsigned int surge_sampleRate;
 extern const unsigned int surge_length;
 extern const signed char surge_data[];
-# 49 "main.c" 2
+# 46 "main.c" 2
 # 1 "analogSound.h" 1
 # 257 "analogSound.h"
 enum note {
@@ -1271,21 +1223,65 @@ void playDrumSound(unsigned char r, unsigned char s, unsigned char b, unsigned c
 void playNoteWithDuration(NoteWithDuration *n, unsigned char duty);
 void playChannel1(unsigned short note, unsigned char length, unsigned char sweepShift, unsigned char sweepTime, unsigned char sweepDir, unsigned char envStepTime, unsigned char envDir, unsigned char duty);
 void playAnalogSound(unsigned short sound);
-# 50 "main.c" 2
+# 47 "main.c" 2
+# 1 "bossmovement.h" 1
+# 9 "bossmovement.h"
+# 1 "bossroom1.h" 1
 
-void playPauseSound() {
-    playAnalogSound(7);
-}
 
 
+
+
+
+
+extern const unsigned short bossroom1Map[1024];
+# 10 "bossmovement.h" 2
+# 27 "bossmovement.h"
+extern SPRITE player;
+
+
+
+
+typedef struct {
+    int x, y;
+    int width, height;
+    int lives;
+    int behaviorState;
+    int behaviorTimer;
+    int attackCooldown;
+    int damageDelay;
+    int isInvulnerable;
+    int invulnerableTimer;
+    int timeUntilNextFrame;
+    int direction;
+    int isAnimating;
+    int currentFrame;
+    int numFrames;
+    u8 oamIndex;
+
+} BOSS;
+
+void initBoss(BOSS* boss, int x, int y, int width, int height);
+
+
+void updateBoss(BOSS* boss, SPRITE* player);
+
+
+void drawBoss(BOSS* boss, OBJ_ATTR* shadowOAM, int index, int hOff, int vOff);
+
+
+int checkBossCollision(BOSS* boss, SPRITE* player);
+# 48 "main.c" 2
+
+
+
+int timer = 0;
+u16 redFlowerPalette[16];
 
 
 void setupInterrupts();
 void interruptHandler();
 
-
-
-enum {SUNID = 6, FLOWERID = 12} tileid;
 
 
 int hScroll;
@@ -1296,6 +1292,40 @@ int hScroll;
 
 
 OBJ_ATTR shadowOAM[128];
+
+
+typedef struct {
+    int row;
+    int col;
+    int active;
+    int state;
+    int spriteIndex;
+    int lifetime;
+    int isRed;
+    int width;
+    int height;
+} Flower;
+
+
+Flower flowers[10];
+SOUND soundA;
+SOUND soundB;
+
+
+
+
+void drawFlower(Flower* flower);
+void initFlowers();
+void spawnRandomFlower();
+void spawnFlower(int row, int col);
+void drawFlower(Flower* flower);
+void drawPlayer();
+void updatePlayer();
+void boss();
+void drawBoss();
+void drawWaterBoss();
+void drawstartsprite();
+void checkTriggerAreas();
 
 
 
@@ -1316,6 +1346,7 @@ void lose();
 
 
 
+
 enum {START, INSTRUCTIONS, GAME1, BOSS1, PAUSE, WIN, LOSE};
 int state;
 
@@ -1323,12 +1354,14 @@ int state;
 SPRITE player;
 SPRITE bossEntrance;
 BOSS waterBoss;
+BOSS samuraiBoss;
 SPRITE startsprite;
 typedef enum {DOWN, UP, LEFT, RIGHT} DIRECTION;
 
 
-int muShengUnlocked = 0;
-int currentCharacter = 0;
+
+int flowersProtected = 0;
+int flowersNeeded = 10;
 
 int animationCounter = 0;
 int animationSpeed = 10;
@@ -1343,11 +1376,12 @@ int vOff;
 
 
 int prevState;
-# 132 "main.c"
+# 163 "main.c"
 int main() {
     initSound();
     initialize();
     state = START;
+    srand(42);
 
 
    while (1) {
@@ -1415,11 +1449,12 @@ void goToStart() {
     DMANow(3, parallaxtilesetTiles, &((CB*) 0x6000000)[0], 45056 / 2);
     DMANow(3, parallaxtilesetTiles, &((CB*) 0x6000000)[0], 45056 / 2);
 
-    DMANow(3, parallaxbgMap, &((SB*) 0x6000000)[8], (2048) / 2);
+    DMANow(3, bubbleMap, &((SB*) 0x6000000)[8], (2048) / 2);
 
 
 
-    DMANow(3, parallaxcloudsMap, &((SB*) 0x6000000)[16], (2048) / 2);
+    DMANow(3, cloudsMap, &((SB*) 0x6000000)[16], (2048) / 2);
+
 
 
 
@@ -1439,9 +1474,9 @@ void goToStart() {
 
 void updatestart() {
 
-
-
-
+    if ((~(buttons) & ((1<<2)))) {
+        ((SB*) 0x6000000)[16].tilemap[((10) * (32) + (15))] = 99;
+    }
 
 
 
@@ -1481,6 +1516,10 @@ void start() {
         DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 128 * 4);
         waitForVBlank();
 
+        DMANow(3, instructionsPal, ((unsigned short *)0x5000000), 256);
+
+        drawFullscreenImage4(instructionsBitmap);
+
         state = INSTRUCTIONS;
 
 
@@ -1494,8 +1533,6 @@ void start() {
     }
 
     void goToPause() {
-
-        playPauseSound();
         (*(volatile unsigned short *)0x4000000) = ((4) & 7) | (1 << (8 + (2 % 4)));
 
 
@@ -1534,6 +1571,7 @@ void start() {
 
 
 void goToWin() {
+    flowersProtected = 0;
     (*(volatile unsigned short *)0x4000000) = ((4) & 7) | (1 << (8 + (2 % 4)));
 
 
@@ -1548,7 +1586,6 @@ void goToWin() {
 
 
     DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 128 * 4);
-    muShengUnlocked = 1;
     prevState = 2;
     state = WIN;
 }
@@ -1567,6 +1604,7 @@ void win() {
 
 void goToLose() {
 
+    flowersProtected = 0;
     (*(volatile unsigned short *)0x4000000) = ((4) & 7) | (1 << (8 + (2 % 4)));
 
 
@@ -1600,10 +1638,6 @@ void lose() {
 
 void goToGame1() {
 
-    if (prevState == 2) {
-        muShengUnlocked = 1;
-    }
-
     if (state == PAUSE) {
         (*(volatile unsigned short *)0x4000000) = ((0) & 7) | (1 << (8 + (0 % 4))) | (1 << 12);
         (*(volatile unsigned short*) 0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 7) | (0 << 14);
@@ -1615,7 +1649,7 @@ void goToGame1() {
 
 
         DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
+     DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
         state = GAME1;
         return;
     }
@@ -1634,7 +1668,7 @@ void goToGame1() {
 
 
     DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
-    DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
+     DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
 
 
     hideSprites();
@@ -1644,10 +1678,10 @@ void goToGame1() {
     vOff = 0;
 
 
-    player.width = 16;
-    player.height = 40;
     player.x = 30;
     player.y = 14;
+    player.width = 16;
+    player.height = 32;
     player.numFrames = 3;
     player.direction = DOWN;
     player.timeUntilNextFrame = 10;
@@ -1655,17 +1689,12 @@ void goToGame1() {
     player.yVel = 1;
     player.currentFrame = 0;
     player.isAnimating = 0;
-    player.health = 20;
+    player.health = 100;
 
-
-
-    bossEntrance.width = 16;
-    bossEntrance.height = 32;
-    bossEntrance.x = 200;
-    bossEntrance.y = 160;
 
 
     initBoss(&waterBoss, 100, 90, 64, 64);
+    initBoss(&samuraiBoss, 140, 40, 64, 64);
 
     state = GAME1;
 }
@@ -1675,14 +1704,9 @@ void game1() {
 
     updatePlayer();
 
+    checkTriggerAreas();
 
 
-
-
-        if (muShengUnlocked && (!(~(oldButtons) & ((1<<0))) && (~(buttons) & ((1<<0))))) {
-
-            currentCharacter = (currentCharacter == 0) ? 1 : 0;
-        }
 
     if ((!(~(oldButtons) & ((1<<2))) && (~(buttons) & ((1<<2))))){
         goToBoss1();
@@ -1692,13 +1716,12 @@ void game1() {
 
     if ((!(~(oldButtons) & ((1<<3))) && (~(buttons) & ((1<<3))))) {
         goToPause();
+
         return;
     }
 
 
     drawPlayer();
-    drawBossEntrance();
-
 
     waitForVBlank();
     DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 128*4);
@@ -1707,6 +1730,13 @@ void game1() {
 
 
 void goToBoss1() {
+    flowersProtected = 0;
+    flowersNeeded = 10;
+
+    for (int i = 0; i < 10; i++) {
+        drawFlower(&flowers[i]);
+    }
+
     prevState = 1;
 
     if (state == PAUSE) {
@@ -1714,12 +1744,12 @@ void goToBoss1() {
         (*(volatile unsigned short*) 0x4000008) = ((0) << 2) | ((28) << 8) | (1 << 7) | (0 << 14);
 
 
-        DMANow(3, decor_8x8Tiles, &((CB*) 0x6000000)[0], 1024/2);
-        DMANow(3, bossroom1Map, &((SB*) 0x6000000)[28], (2048)/2);
-        DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
+        DMANow(3, bossmazetilesTiles, &((CB*) 0x6000000)[0], 65536/2);
+        DMANow(3, bossmazemapMap, &((SB*) 0x6000000)[28], (2048)/2);
+        DMANow(3, bossmazetilesPal, ((unsigned short *)0x5000000), 256);
 
-        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
+        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4],32768/2);
+     DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
         state = BOSS1;
         return;
     }
@@ -1732,11 +1762,11 @@ void goToBoss1() {
 
 
 
-        DMANow(3, decor_8x8Tiles, &((CB*) 0x6000000)[0], 1024/2);
-        DMANow(3, bossroom1Map, &((SB*) 0x6000000)[28], (2048)/2);
-        DMANow(3, decor_8x8Pal, ((unsigned short *)0x5000000), 256);
-        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4], 32768/2);
-        DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
+    DMANow(3, bossmazetilesTiles, &((CB*) 0x6000000)[0], 65536/2);
+    DMANow(3, bossmazemapMap, &((SB*) 0x6000000)[28], (2048)/2);
+    DMANow(3, bossmazetilesPal, ((unsigned short *)0x5000000), 256);
+        DMANow(3, myspritesheetTiles, &((CB*) 0x6000000)[4],32768/2);
+     DMANow(3, myspritesheetPal, ((u16 *)0x5000200), 256);
 
 
     hideSprites();
@@ -1747,7 +1777,7 @@ void goToBoss1() {
 
 
 
-    player.x = 100;
+    player.x = 10;
     player.y = 100;
     player.numFrames = 3;
     player.direction = DOWN;
@@ -1756,8 +1786,13 @@ void goToBoss1() {
     player.yVel = 1;
     player.currentFrame = 0;
     player.isAnimating = 0;
-    player.health = 20;
+    player.health = 100;
     player.damageTimer = 0;
+
+    initFlowers();
+    initRedFlowerPalette();
+
+
 
     state = BOSS1;
 }
@@ -1765,8 +1800,17 @@ void goToBoss1() {
 
 
 void boss() {
+
     updatePlayer();
+    updateFlowers();
+    checkFlowerCollisions();
+    timer++;
+    for (int i = 0; i < 10; i++) {
+        drawFlower(&flowers[i]);
+    }
+
     updateBoss(&waterBoss, &player);
+    updateBoss(&samuraiBoss, &player);
 
 
     if (player.damageTimer > 0) {
@@ -1775,11 +1819,15 @@ void boss() {
 
 
 
-    if (checkBossCollision(&waterBoss, &player)) {
 
-        if (waterBoss.currentFrame == 2 && player.damageTimer == 0) {
-            player.health -= 5;
-            player.damageTimer = 60;
+
+    if (checkBossCollision(&waterBoss, &player) || checkBossCollision(&samuraiBoss, &player)) {
+
+        if (player.damageTimer == 0) {
+
+        if (waterBoss.currentFrame == 1 || samuraiBoss.currentFrame == 1) {
+            player.health -= 10;
+            player.damageTimer = 50;
 
 
             if (player.health <= 0) {
@@ -1787,22 +1835,18 @@ void boss() {
                 goToLose();
             }
         }
-
-
-        if ((!(~(oldButtons) & ((1<<1))) && (~(buttons) & ((1<<1)))) && player.isAttacking) {
-            waterBoss.lives-=5;
-
-
-            if (waterBoss.lives <= 0) {
-                goToWin();
-            }
-        }
     }
+    }
+
+
+    if (timer % 120 == 0) {
+        spawnRandomFlower();
+    }
+
 
     drawPlayer();
     drawWaterBoss();
-
-
+    drawSamuraiBoss();
 
         waitForVBlank();
         DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 128*4);
@@ -1861,15 +1905,23 @@ void boss() {
 
 
 
+        if (player.x < 0) player.x = 0;
+        if (player.y < 0) player.y = 0;
+        if (player.x + player.width > 256) player.x = 256 - player.width;
+        if (player.y + player.height > 256) player.y = 256 - player.height;
+
+
+        hOff = player.x - (240 - player.width) / 2;
+        vOff = player.y - (160 - player.height) / 2;
+
+
+        if (hOff < 0) hOff = 0;
+        if (vOff < 0) vOff = 0;
+        if (hOff > 256 - 240) hOff = 256 - 240;
+        if (vOff > 256 - 160) vOff = 256 - 160;
+
     if ((!(~(oldButtons) & ((1<<1))) && (~(buttons) & ((1<<1)))) && !player.isAttacking) {
         player.isAttacking = 1;
-
-
-
-
-
-
-    }
 
 
 
@@ -1888,23 +1940,8 @@ void boss() {
 
 
 
-
-    if (player.x < 0) player.x = 0;
-    if (player.y < 0) player.y = 0;
-    if (player.x + player.width > 256) player.x = 256 - player.width;
-    if (player.y + player.height > 256) player.y = 256 - player.height;
-
-
-    hOff = player.x - (240 - player.width) / 2;
-    vOff = player.y - (160 - player.height) / 2;
-
-
-    if (hOff < 0) hOff = 0;
-    if (vOff < 0) vOff = 0;
-    if (hOff > 256 - 240) hOff = 256 - 240;
-    if (vOff > 256 - 160) vOff = 256 - 160;
     }
-
+    }
 
 
 
@@ -1914,8 +1951,6 @@ void boss() {
 
         shadowOAM[0].attr0 = ((player.y - vOff) & 0xFF) | (0<<13) | (2<<14);
         shadowOAM[0].attr1 = ((player.x - hOff) & 0x1FF) | (2<<14);
-
-
 
         (*(volatile unsigned short*) 0x04000010) = hOff;
         (*(volatile unsigned short*) 0x04000012) = vOff;
@@ -1929,19 +1964,6 @@ void boss() {
             animationCounter = 0;
             player.currentFrame = (player.currentFrame + 1) % 7;
         }
-
-        if (player.isAttacking) {
-
-            if (currentCharacter == 1) {
-                shadowOAM[0].attr2 = ((((16) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
-            } else {
-                shadowOAM[0].attr2 = ((((1) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
-            }
-        } else {
-
-            if (currentCharacter == 1) {
-                shadowOAM[0].attr2 = ((((16) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
-            } else {
 
 
             if (player.direction == DOWN) {
@@ -1957,70 +1979,134 @@ void boss() {
             }
 
 
-            row += (currentCharacter * 4);
 
 
+            int column = player.currentFrame % 5;
 
-            int column = player.currentFrame % 7;
+        shadowOAM[0].attr2 = ((((row * 4) * (32) + (column * 2))) & 0x3FF) | (((0) & 0xF) <<12);
 
-            shadowOAM[0].attr2 = ((((row * 4) * (32) + (column * 2))) & 0x3FF) | (((0) & 0xF) <<12);
-            }
         }
 
-    }
 
-
-    void drawBossEntrance(){
-        int screenX = bossEntrance.x - hOff;
-        int screenY = bossEntrance.y - vOff;
-
-         shadowOAM[1].attr0 = ((screenY) & 0xFF) | (1<<13) | (2<<14);
-         shadowOAM[1].attr1 = ((screenX) & 0x1FF) | (2<<14);
-         shadowOAM[1].attr2 = ((((17) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
-    }
 
     void drawstartsprite(){
         shadowOAM[5].attr0 = ((startsprite.y) & 0xFF) | (0<<13) | (0<<14);
         shadowOAM[5].attr1 = ((startsprite.x) & 0x1FF) | (3<<14);
-        shadowOAM[5].attr2 = ((((90) * (32) + (0))) & 0x3FF) | (((1) & 0xF) <<12) | (((1) & 3) << 10);
+        shadowOAM[5].attr2 = ((((22) * (32) + (0))) & 0x3FF) | (((1) & 0xF) <<12) | (((1) & 3) << 10);
 
     }
+
+    void drawSamuraiBoss(){
+        int screenX = samuraiBoss.x - hOff;
+        int screenY = samuraiBoss.y - vOff;
+
+        shadowOAM[16].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
+        shadowOAM[16].attr1 = ((screenX) & 0x1FF) | (2<<14);
+        shadowOAM[16].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
+
+
+
+
+        if (samuraiBoss.currentFrame == 0) {
+            shadowOAM[16].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
+            shadowOAM[16].attr1 = ((screenX) & 0x1FF) | (2<<14);
+
+            shadowOAM[16].attr2 = ((((17) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
+        } else if (samuraiBoss.currentFrame == 1) {
+
+            shadowOAM[16].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[16].attr1 = ((screenX) & 0x1FF) | (3<<14);
+            shadowOAM[16].attr2 = ((((17) * (32) + (6))) & 0x3FF) | (((0) & 0xF) <<12);
+
+        } else if (samuraiBoss.currentFrame == 2) {
+
+            shadowOAM[16].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[16].attr1 = ((screenX) & 0x1FF) | (3<<14);
+            shadowOAM[16].attr2 = ((((17) * (32) + (15))) & 0x3FF) | (((0) & 0xF) <<12);
+
+        } else if (samuraiBoss.currentFrame == 3) {
+            shadowOAM[16].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[16].attr1 = ((screenX) & 0x1FF) | (3<<14);
+            shadowOAM[16].attr2 = ((((17) * (32) + (24))) & 0x3FF) | (((0) & 0xF) <<12);
+
+        }
+
+
+        samuraiBoss.timeUntilNextFrame--;
+        if(samuraiBoss.timeUntilNextFrame <= 0) {
+            samuraiBoss.currentFrame = (waterBoss.currentFrame + 1) % 4;
+            samuraiBoss.timeUntilNextFrame = (rand() % (50 - 20 + 1)) + 20;
+        }
+    }
+
 
     void drawWaterBoss(){
         int screenX = waterBoss.x - hOff;
         int screenY = waterBoss.y - vOff;
 
         shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
-        shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (3<<14);
+        shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (2<<14);
         shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
 
 
 
 
         if (waterBoss.currentFrame == 0) {
-            shadowOAM[3].attr0 = (2<<8);
+            shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
+            shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (2<<14);
 
-            shadowOAM[2].attr2 = ((((17) * (32) + (2))) & 0x3FF) | (((0) & 0xF) <<12);
+            shadowOAM[2].attr2 = ((((17) * (32) + (0))) & 0x3FF) | (((0) & 0xF) <<12);
         } else if (waterBoss.currentFrame == 1) {
 
-            shadowOAM[3].attr0 = (2<<8);
-            shadowOAM[2].attr2 = ((((17) * (32) + (9))) & 0x3FF) | (((0) & 0xF) <<12);
+            shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (3<<14);
+            shadowOAM[2].attr2 = ((((17) * (32) + (6))) & 0x3FF) | (((0) & 0xF) <<12);
+
         } else if (waterBoss.currentFrame == 2) {
 
-            shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
-            shadowOAM[2].attr1 = ((screenX-64) & 0x1FF) | (3<<14);
+            shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (3<<14);
             shadowOAM[2].attr2 = ((((17) * (32) + (15))) & 0x3FF) | (((0) & 0xF) <<12);
 
-            shadowOAM[3].attr0 = ((screenY) & 0xFF) | (0<<13) | (0<<14);
-            shadowOAM[3].attr1 = ((screenX) & 0x1FF) | (3<<14);
-            shadowOAM[3].attr2 = ((((17) * (32) + (23))) & 0x3FF) | (((0) & 0xF) <<12);
+        } else if (waterBoss.currentFrame == 3) {
+            shadowOAM[2].attr0 = ((screenY) & 0xFF) | (0<<13) | (1<<14);
+            shadowOAM[2].attr1 = ((screenX) & 0x1FF) | (3<<14);
+            shadowOAM[2].attr2 = ((((17) * (32) + (24))) & 0x3FF) | (((0) & 0xF) <<12);
+
         }
 
 
         waterBoss.timeUntilNextFrame--;
         if(waterBoss.timeUntilNextFrame <= 0) {
-            waterBoss.currentFrame = (waterBoss.currentFrame + 1) % 3;
+            waterBoss.currentFrame = (waterBoss.currentFrame + 1) % 4;
             waterBoss.timeUntilNextFrame = (rand() % (50 - 20 + 1)) + 20;
+        }
+    }
+
+    void drawFlower(Flower* flower) {
+        if (flower->active) {
+
+            int screenX = flower->col - hOff;
+            int screenY = flower->row - vOff;
+
+
+            if (screenX >= -16 && screenX < 240 &&
+                screenY >= -32 && screenY < 160) {
+
+                shadowOAM[flower->spriteIndex].attr0 = ((screenY) & 0xFF) | (0<<13) | (2<<14);
+                shadowOAM[flower->spriteIndex].attr1 = ((screenX) & 0x1FF) | (0<<14);
+                if (flower->isRed) {
+                    shadowOAM[flower->spriteIndex].attr2 = ((((30) * (32) + (0))) & 0x3FF) | (((3) & 0xF) <<12);
+                } else {
+                    shadowOAM[flower->spriteIndex].attr2 = ((((30) * (32) + (0))) & 0x3FF) | (((2) & 0xF) <<12);
+                }
+            } else {
+
+                shadowOAM[flower->spriteIndex].attr0 = (2<<8);
+            }
+        } else {
+
+            shadowOAM[flower->spriteIndex].attr0 = (2<<8);
         }
     }
 
@@ -2028,11 +2114,10 @@ void boss() {
 
 
 
-    void playBackgroundMusic() {
+    void playAnalogSoundEffect(unsigned short sound) {
 
-        playSoundA(surge_data, surge_length, 1);
+        playAnalogSound(sound);
     }
-
 
     void setupInterrupts() {
 
@@ -2047,6 +2132,7 @@ void boss() {
         *(unsigned short*)0x4000208 = 1;
 
     }
+
 
 
     void interruptHandler() {
@@ -2081,6 +2167,160 @@ void boss() {
         }
         }
 
+
+
         *(volatile unsigned short*)0x4000202 = *(volatile unsigned short*)0x4000202;
         *(unsigned short*)0x4000208 = 1;
     }
+
+
+
+
+
+    typedef struct {
+        int x, y;
+        int width, height;
+        int targetState;
+    } TRIGGER_AREA;
+
+    TRIGGER_AREA triggerAreas[] = {
+        {240, 40, 32, 32, BOSS1},
+
+    };
+
+
+
+
+    void checkTriggerAreas() {
+        for (int i = 0; i < (sizeof(triggerAreas) / sizeof(TRIGGER_AREA)); i++) {
+            if (collision(
+                player.x, player.y, player.width, player.height,
+                triggerAreas[i].x, triggerAreas[i].y,
+                triggerAreas[i].width, triggerAreas[i].height)) {
+
+
+                switch (triggerAreas[i].targetState) {
+                    case BOSS1:
+                        goToBoss1();
+                        return;
+
+                }
+            }
+        }
+    }
+
+
+
+    void initFlowers() {
+        for (int i = 0; i < 10; i++) {
+            flowers[i].active = 0;
+            flowers[i].state = 0;
+            flowers[i].width = 8;
+            flowers[i].height = 16;
+        }
+    }
+
+    void spawnRandomFlower() {
+        int padding = 8;
+        int row = padding + (rand() % (256 - 2 * padding));
+        int col = padding + (rand() % (256 - 2 * padding));
+        spawnFlower(row, col);
+    }
+
+    void spawnFlower(int row, int col) {
+        for (int i = 0; i < 10; i++) {
+            if (!flowers[i].active) {
+                flowers[i].row = row;
+                flowers[i].col = col;
+                flowers[i].active = 1;
+                flowers[i].state = 0;
+                flowers[i].spriteIndex = i + 3;
+                flowers[i].lifetime = 300;
+                flowers[i].isRed = 0;
+                break;
+            }
+        }
+    }
+
+
+    void initRedFlowerPalette() {
+
+        u16* spritePalette = (u16*)((u16 *)0x5000200);
+
+
+        for (int i = 0; i < 16; i++) {
+
+            u16 origColor = spritePalette[32 + i];
+
+
+            u16 origRed = origColor & 0x1F;
+            u16 origGreen = (origColor >> 5) & 0x1F;
+            u16 origBlue = (origColor >> 10) & 0x1F;
+
+
+            u16 newRed = 31;
+            u16 newGreen = origGreen / 3;
+            u16 newBlue = origBlue / 3;
+
+
+            redFlowerPalette[i] = (((newRed) & 31) | ((newGreen) & 31) << 5 | ((newBlue) & 31) << 10);
+        }
+
+        DMANow(3, redFlowerPalette, &((u16 *)0x5000200)[48], 16);
+    }
+
+
+
+void updateFlowers() {
+
+    for (int i = 0; i < 10; i++) {
+        if (flowers[i].active) {
+
+            flowers[i].lifetime--;
+
+
+            if (flowers[i].lifetime < 100) {
+                flowers[i].isRed = 1;
+
+            } else {
+                flowers[i].isRed = 0;
+            }
+
+
+            if (flowers[i].lifetime <= 0) {
+                flowers[i].active = 0;
+            }
+        }
+    }
+}
+
+void checkFlowerCollisions() {
+    for (int i = 0; i < 10; i++) {
+
+        if (flowers[i].active) {
+
+            if (collision(
+                player.x, player.y, player.width, player.height,
+                flowers[i].col, flowers[i].row, flowers[i].width, flowers[i].height)) {
+
+
+                flowers[i].active = 0;
+                flowersProtected++;
+
+
+                playCollectSound();
+
+
+
+                if (flowersProtected >= flowersNeeded) {
+                    goToWin();
+                    return;
+                }
+            }
+        }
+    }
+}
+
+void playCollectSound() {
+    playAnalogSound(16);
+}

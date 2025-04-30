@@ -22,23 +22,23 @@ initBoss:
 	@ args = 4, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	mov	ip, #0
-	push	{r4, r5, lr}
-	mov	r5, #60
-	mov	r4, #50
+	push	{r4, lr}
 	mov	lr, #20
-	stm	r0, {r1, r2, r3}
-	ldr	r3, [sp, #12]
-	str	r5, [r0, #24]
-	str	r4, [r0, #44]
+	mov	r4, #60
+	stm	r0, {r1, r2}
+	ldr	r2, [sp, #8]
+	str	r4, [r0, #24]
+	str	lr, [r0, #44]
 	str	lr, [r0, #16]
-	str	r3, [r0, #12]
+	str	r3, [r0, #8]
+	str	r2, [r0, #12]
 	str	ip, [r0, #20]
 	str	ip, [r0, #28]
 	str	ip, [r0, #32]
 	str	ip, [r0, #36]
 	str	ip, [r0, #40]
 	str	ip, [r0, #56]
-	pop	{r4, r5, lr}
+	pop	{r4, lr}
 	bx	lr
 	.size	initBoss, .-initBoss
 	.align	2
@@ -249,35 +249,39 @@ checkBossCollision:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	@ link register save eliminated.
 	ldr	r3, [r0, #56]
-	cmp	r3, #2
-	beq	.L54
-.L53:
+	sub	r3, r3, #1
+	cmp	r3, #1
+	bls	.L55
 	mov	r0, #0
 	bx	lr
-.L54:
-	ldr	ip, [r0]
-	ldr	r3, [r0, #8]
-	ldr	r2, [r1]
-	add	r3, ip, r3
-	cmp	r2, r3
-	bge	.L53
-	ldr	r3, [r1, #16]
-	add	r2, r2, r3
-	cmp	r2, ip
-	ble	.L53
-	ldr	ip, [r0, #4]
-	ldr	r2, [r0, #12]
-	ldr	r3, [r1, #4]
-	add	r2, ip, r2
-	cmp	r3, r2
-	bge	.L53
-	ldr	r0, [r1, #20]
-	add	r0, r3, r0
-	cmp	r0, ip
-	movle	r0, #0
-	movgt	r0, #1
+.L55:
+	mov	ip, r1
+	push	{r4, lr}
+	add	r1, r0, #8
+	ldm	r1, {r1, lr}
+	ldr	r2, [r0, #4]
+	ldr	r3, [r0]
+	sub	sp, sp, #16
+	str	r2, [sp, #4]
+	str	lr, [sp, #12]
+	str	r1, [sp, #8]
+	str	r3, [sp]
+	add	r2, ip, #16
+	ldm	r2, {r2, r3}
+	ldm	ip, {r0, r1}
+	ldr	r4, .L56
+	mov	lr, pc
+	bx	r4
+	subs	r0, r0, #0
+	movne	r0, #1
+	add	sp, sp, #16
+	@ sp needed
+	pop	{r4, lr}
 	bx	lr
+.L57:
+	.align	2
+.L56:
+	.word	collision
 	.size	checkBossCollision, .-checkBossCollision
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

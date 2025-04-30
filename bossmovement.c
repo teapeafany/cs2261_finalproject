@@ -13,7 +13,7 @@ void initBoss(BOSS* boss, int x, int y, int width, int height) {
     boss->isInvulnerable = 0;
     boss->invulnerableTimer = 0;
     boss->currentFrame = 0;
-    boss->timeUntilNextFrame = 50;
+    boss->timeUntilNextFrame = 20;
     boss-> lives = 20;
 }
 
@@ -114,16 +114,14 @@ void updateBoss(BOSS* boss, SPRITE* player) {
 
 int checkBossCollision(BOSS* boss, SPRITE* player) {
      // Only check when the boss is in frame 2 (index 2) which has the second half
-     if (boss->currentFrame == 2) {
-        // Calculate the position of the second half sprite
-        int secondHalfX = boss->x; // The X position of the second half
-        int secondHalfY = boss->y; // The Y position is the same
-        
-        // Check for collision between player and second half sprite
-        return (player->x < secondHalfX + boss->width && 
-                player->x + player->width > secondHalfX && 
-                player->y < secondHalfY + boss->height && 
-                player->y + player->height > secondHalfY);
-    }
+     if (boss->currentFrame == 1 || boss->currentFrame == 2) {
+        // Check for collision with player
+            if (collision(
+                player->x, player->y, player->width, player->height,
+                boss->x, boss->y, boss->width, boss->height)) {
+                
+                return 1; // Collision occurred
+            }
+        }
     return 0; // No collision if boss isn't in the right frame
 }

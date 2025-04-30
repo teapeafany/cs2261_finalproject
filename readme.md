@@ -15,20 +15,16 @@
 
 The game consists of the following states:
 - `START`: Title screen
-    -includes  **parallax bgs**! two moving bg layers at diff speeds and a draft **sprite** of Mu Sheng and Miao Miao together! 
-    -also small **tilemap modification** when pressing SELECT. flower appears.
+    -includes  **parallax bgs**! two moving bg layers at diff speeds and  **sprite** of Mu Sheng and Miao Miao together! 
+    -also small **tilemap modification** when pressing SELECT. star appears.
     -looping sound from cdrama ost begins playing!!
     
 
 - `INSTRUCTIONS`: Gives all the button instructions
-- `GAME1`: Main exploration town
-    - draft **sprite** of Miao Miao (with attack animation)
-    - after win, draft **sprite** of Mu Sheng unlocked (with attack animation)
-- `BOSS1`: Boss battle
+- `GAME1`: Main exploration town **sprite** of Miao Miao (with animation)
+- `BOSS1`: Boss battle with samurai protect the memory flowers. 
     - **boss sprite** with attack animation
 - `PAUSE`: Pause screen with resume/start logic
 - `WIN`: Win screen
 - `LOSE`: Lose screen
-
-**note: i was going to polish up the parallax backgrounds and sprites with better art but was down with a fever in the middle of this week and didn't have the time TT sorry the assets are so wack!**
 
